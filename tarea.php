@@ -2,7 +2,7 @@
     $direccion="localhost";
     $usuario="root";
     $contraseña="";
-    $nombreBase="RegistrarTareas"
+    $nombreBase="RegistrarTareas";
 
     $conexion=new mysqli($direccion,$usuario,$contraseña,$nombreBase);
     if($conexion ->error){
@@ -13,7 +13,8 @@
     $resultado=$conexion->query($sql);
     if($resultado->num_rows>0){
         while($fila=$resultado->fetch_assoc()){
-            echo $fila['id']."<br>".$fila['nombre']."<br>". $fila['descripcion']."<br>".$fila['estado']."<br>".
+            echo $fila['id']."<br>".$fila['nombre']."<br>". $fila['descripcion']."<br>".$fila['estado'];
         }
     }
+    
     ?>
