@@ -7,6 +7,7 @@
      $conexion=new mysqli($direccion,$usuario,$contraseña,$nombreBase);
     if($conexion ->error){
         echo "Hubo un error al conectar la base de datos";
+    }
 
     $sql="SELECT* FROM tareas";
     $resultado=$conexion->query($sql);
