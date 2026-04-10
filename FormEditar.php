@@ -13,7 +13,9 @@
     $resultado=$conexion->query($sql);
     if($resultado->num_rows>0){
         while($fila=$resultado->fetch_assoc()){
-            echo $fila['id']."<br>".$fila['nombre']."<br>". $fila['descripcion']."<br>".$fila['estado'];
+        $nombre=$fila['nombre'];
+        $descripcion=$fila['descripcion'];
+        $estado=$fila['estado'];
         }
     }
 ?>
@@ -33,7 +35,7 @@
         <input type="text" name="descripcion" value=<?=$descripcion?>><br>
         <label for="">Estado:</label>
         <input type="text" name="estado" value=<?=$estado?>><br>
-        <input type="submit" value="registrar"><br>
+        <input type="submit" value="editar"><br>
     </form>
     </body>
     </html>
