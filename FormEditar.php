@@ -13,6 +13,7 @@
     $resultado=$conexion->query($sql);
     if($resultado->num_rows>0){
         while($fila=$resultado->fetch_assoc()){
+        $id=$fila['id'];
         $nombre=$fila['nombre'];
         $descripcion=$fila['descripcion'];
         $estado=$fila['estado'];
@@ -29,6 +30,8 @@
     <body>
         <form  class="caja" method="post">
         <h1>REGISTRO DE TAREAS</h1>
+        <label for="">Id</label>
+        <input type="text" name="id" value="<?=$id?>"><br>
         <label for="">Nombre:</label>
         <input type="text" name="nombre" value=<?=$nombre?>><br>
         <label for="">Descripcion:</label>
