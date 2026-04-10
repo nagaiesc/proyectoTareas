@@ -4,7 +4,7 @@
     $contraseña="";
     $nombreBase="RegistrarTareas";
 
-    $conexion= new mysqli($direccion,$usuario,$contraseña);
+    $conexion= new mysqli($direccion,$usuario,$contraseñ,$nombreBase);
     if($conexion->error){
         echo "Hubo un error al conectar a la base de datos";
     }
